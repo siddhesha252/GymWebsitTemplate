@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gym Website Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"  href="css/animate.css"   >
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <style>
+    .wow:first-child {
+      visibility: hidden;
+    }
+  </style>
+  
+</head>
+<body>
+ 
+ <!-- Start Header  -->
+ <header>
+ 	 <div class="container">
+ 	 	<div class="logo">
+ 	 		 <a href="">Workout<span>Zone</span></a>
+ 	 	</div>
+ 	 	<a href="javascript:void(0)" class="ham-burger">
+ 	       <span></span>	
+ 	       <span></span>
+ 	 	</a>
+ 	 	<div class="nav">
+ 	 		<ul>
+ 	 			<li><a href="home.html">Home</a></li>
+ 	 			<li><a href="about.html">About</a></li>
+ 	 			<li><a href="service.html">Services</a></li>
+ 	 			<li><a href="classes.html">Classes</a></li>
+ 	 			<li><a href="schedule.html">Schedule</a></li>
+				  <li><a href="price.html">Price</a></li>
+				  <li><a href="blog.html">Blog</a></li>
+ 	 			<li><a href="contact.html">Contact</a></li>
+ 	 		</ul>
+ 	 	</div>
+ 	 </div>
+ </header>
+ <!-- End Header  -->
+ 
+<!-- Start Contact -->
+<section class="contact" id="contact">
+	<div class="container">
+	   <div class="content">
+		   <div class="box form wow slideInLeft">
+			<h2>Contact Us</h2>
+			  <form>
+				 <input type="text" placeholder="Enter Name">
+				 <input type="text" placeholder="Enter Email">
+				 <input type="text" placeholder="Enter Mobile">
+				 <textarea placeholder="Enter Message"></textarea>
+				 <button type="submit">Submit</button>
+			  </form>
+		   </div>
+		   <div class="Google-map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.68101876185!2d73.7228790230887!3d18.52489042136964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1600514637499!5m2!1sen!2sin" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		   </div>
+		</section>
+		   
+
+  <!-- End Contact -->
+
+  <!-- Start Footer-->
+ <section class=" Footer" id="Footer">
+	<div class="container">
+	   <div class="content">
+		<div class="box text wow slideInRight">
+				<h2>Get Connected with Gym</h2>
+				 <p class="title-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+				 <div class="info">
+					 <ul>
+						 <li><span class="fa fa-map-marker"></span> Pune</li>
+						 <li><span class="fa fa-phone"></span> xxxxxxxxx</li>
+						 <li><span class="fa fa-envelope"></span> contact@gym.com</li>
+					 </ul>
+				 </div>
+				 <div class="social">
+					  <a href=""><span class="fa fa-facebook"></span></a>
+					  <a href=""><span class="fa fa-linkedin"></span></a>
+					  <a href=""><span class="fa fa-youtube-play"></span></a>
+				 </div>
+  
+				 <div class="copy">
+					 &copy; Siddhesha 
+				 </div>
+		   </div>
+	   </div>
+	</div>
+  </section>
+  <!-- End Footer -->
+
+
+
+<!-- jquery -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+   $(".ham-burger, .nav ul li a").click(function(){
+    
+     $(".nav").toggleClass("open")
+
+     $(".ham-burger").toggleClass("active");
+   })      
+   $(".accordian-container").click(function(){
+     $(".accordian-container").children(".body").slideUp();
+     $(".accordian-container").removeClass("active")
+     $(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+     $(this).children(".body").slideDown();
+     $(this).addClass("active")
+     $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+   })
+
+    $(".nav ul li a, .go-down").click(function(event){
+      if(this.hash !== ""){
+
+           event.preventDefault();
+
+           var hash=this.hash; 
+
+           $('html,body').animate({
+             scrollTop:$(hash).offset().top
+           },800 , function(){
+              window.location.hash=hash;
+           });
+
+           // add active class in navigation
+           $(".nav ul li a").removeClass("active")
+           $(this).addClass("active")
+      }
+   })
+})
+
+</script>
+<script src="js/wow.min.js"></script>
+<script>
+ wow = new WOW(
+   {
+     animateClass: 'animated',
+     offset:       0,
+   }
+ );
+ wow.init();
+</script>
+</body>
+</html>
+
+
+
+
+
+
